@@ -5,22 +5,22 @@
 <div class="max-w-6xl mx-auto px-10 my-4 py-6 bg-white rounded-lg shadow-md">
 
     <div class="mt-2 text-2xl text-gray-700 font-bold">TailPine: Reusable interactive UI components with TailwindCSS and AlpineJS</div>
-    <p class="mt-4 mb-8 text-gray-700">Simple view the source of this HTML page.</p>
+    <p class="mt-4 mb-8 text-gray-700">Simple view the source of this HTML page. You can <a class="text-blue-500 underline" href="https://github.com/PolyglotNetwork/tailpine/" target="_blank">contribute code here</a>.</p>
 
-    <div x-data="{ open: false }" class="max-w-2xl mx-auto mb-8">
-        <button @click="open = true" class="outline-none focus:outline-none border px-3 py-1 bg-gray-100 rounded-sm flex items-center min-w-32">Open Dropdown</button>
+    <div x-data="{ open: false }" class="max-w-xs mx-auto mb-8">
+        <button @click="open = true" class="w-full outline-none focus:outline-none border px-3 py-1 bg-gray-100 rounded-sm flex items-center min-w-32">Open Dropdown</button>
     
         <ul
             x-show="open"
             @click.away="open = false"
             class="bg-gray-100"
         >
-            <li>Action 1</li>
-            <li>Action 2</li>
+            <li class="px-3 py-2 hover:bg-gray-400 cursor-pointer">Action 1</li>
+            <li class="px-3 py-2 hover:bg-gray-400 cursor-pointer">Action 2</li>
         </ul>
     </div>
 
-    <div x-data="{ tab: 'foo' }" class="max-w-2xl mx-auto mb-8">
+    <div x-data="{ tab: 'foo' }" class="max-w-2xl mx-auto mb-8 border-2 border-aqua">
         <button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'" class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:bg-gray-100">Foo</button>
         <button :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'" class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:bg-gray-100">Bar</button>
     
@@ -28,7 +28,7 @@
         <div x-show="tab === 'bar'">Tab Bar</div>
     </div>
 
-    <h2>Coming soon</h2>
+    <h2 class="font-bold text-lg">Component ideas:</h2>
     <p>Carousels, Accordions, TagsInput, Dismissable Alerts etc</p>
 
 </div>
