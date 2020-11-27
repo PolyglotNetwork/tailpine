@@ -1,36 +1,40 @@
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tailpine: Components made with Tailwind CSS and Alpine JS</title>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="https://unpkg.com/twinklecss@1.1.0/twinkle.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    </head>
 
-<body class="bg-gray-200"></body>
-<div class="max-w-6xl mx-auto px-10 my-4 py-6 bg-white rounded-lg shadow-md">
+    <body>
+        <article class="max-w-3xl mt-8 mx-auto prose lg:prose-xl">
+            <h1>Tailpine: UI components made with Tailwind CSS and Alpine JS</h1>
 
-    <div class="mt-2 text-2xl text-gray-700 font-bold">TailPine: Reusable interactive UI components with TailwindCSS and AlpineJS</div>
-    <p class="mt-4 mb-8 text-gray-700">Simple view the source of this HTML page. You can <a class="text-blue-500 underline" href="https://github.com/PolyglotNetwork/tailpine/" target="_blank">contribute code here</a>.</p>
+            <p>For <a href="https://learnawesome.org" target="_blank">LearnAwesome.org</a>, I have been building small UI components
+            here and there. Decided to share here because I thought others might find them useful.</p>
 
-    <div x-data="{ open: false }" class="max-w-xs mx-auto mb-8">
-        <button @click="open = true" class="w-full outline-none focus:outline-none border px-3 py-1 bg-gray-100 rounded-sm flex items-center min-w-32">Open Dropdown</button>
-    
-        <ul
-            x-show="open"
-            @click.away="open = false"
-            class="bg-gray-100"
-        >
-            <li class="px-3 py-2 hover:bg-gray-400 cursor-pointer">Action 1</li>
-            <li class="px-3 py-2 hover:bg-gray-400 cursor-pointer">Action 2</li>
-        </ul>
-    </div>
+            <hr/>
 
-    <div x-data="{ tab: 'foo' }" class="max-w-2xl mx-auto mb-8 border-2 border-aqua">
-        <button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'" class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:bg-gray-100">Foo</button>
-        <button :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'" class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:bg-gray-100">Bar</button>
-    
-        <div x-show="tab === 'foo'">Tab Foo</div>
-        <div x-show="tab === 'bar'">Tab Bar</div>
-    </div>
+            <h3>Five-star rating input:</h3>
 
-    <h2 class="font-bold text-lg">Component ideas:</h2>
-    <p>Carousels, Accordions, TagsInput, Dismissable Alerts etc</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="eshnil" data-slug-hash="GRqdoJe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Alpine.js + Tailwind ">
+                <span>See the Pen <a href="https://codepen.io/eshnil/pen/GRqdoJe">
+                Alpine.js + Tailwind </a> by eshnil (<a href="https://codepen.io/eshnil">@eshnil</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
 
-</div>
-</body>
+            <hr/>
 
+            <h3>SplitButton Dropdown</h3>
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="eshnil" data-slug-hash="JjRjaEP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="TailPine SplitButtonDropdownwith TailwindCSS + AlpineJS ">
+                <span>See the Pen <a href="https://codepen.io/eshnil/pen/JjRjaEP">
+                TailPine SplitButtonDropdownwith TailwindCSS + AlpineJS </a> by eshnil (<a href="https://codepen.io/eshnil">@eshnil</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </article>
+    </body>
+</html>
